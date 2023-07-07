@@ -1,11 +1,11 @@
 import { useState } from "react"
-import {FaClipboardCheck, FaClipboardList} from 'react-icons/fa6'
-
+import { faClipboardCheck, faClipboardList } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 interface clipBoardProps {
   copyText: string
 }
 
-export default function ClipboardCopy({ copyText }: clipBoardProps) {
+export function ClipBoardCopy({ copyText }: clipBoardProps) {
   const [isCopied, setIsCopied] = useState(false);
 
   async function copyTextToClipboard(text: string) {
@@ -29,7 +29,7 @@ export default function ClipboardCopy({ copyText }: clipBoardProps) {
   return (
     <div className="flex items-center justify-center">
       <button onClick={handleCopyClick}>    
-       {isCopied ? <span className="text-white text-sm flex gap-2 bg-green-600 h-7 text-center items-center mt-5 p-5 rounded-lg">{copyText}<FaClipboardCheck/></span> :  <span className="text-white text-sm flex gap-2 bg-red-600 opacity-90 h-7 text-center items-center mt-5 p-5 rounded-lg">{copyText}<FaClipboardList/></span> }
+       {isCopied ? <span className="text-white text-sm flex gap-2 bg-green-600 h-7 text-center items-center mt-5 p-5 rounded-lg">{copyText}<FontAwesomeIcon icon={faClipboardCheck}/></span> :  <span className="text-white text-sm flex gap-2 bg-red-600 opacity-90 h-7 text-center items-center mt-5 p-5 rounded-lg">{copyText}<FontAwesomeIcon icon={faClipboardList}/></span> }
       </button>
     </div>
   );
