@@ -1,10 +1,64 @@
 ---
 import ParticlesComponent from '../components/ParticlesComponent';
 import Layout from '../layouts/Layout.astro';
+import { FaLinkedin, FaGithub } from 'react-icons/fa6';
+
+const navigation = [
+	{ name: 'Projetos', href: '/projects' },
+	{ name: 'Sobre mim', href: '/about' }
+];
+
+const social = [
+	{ name: 'GitHub', href: 'https://github.com/Rafeso' },
+	{
+		name: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/rafael-feitosa-souza/'
+	}
+];
 ---
 
 <Layout title="Home">
-	<ParticlesComponent client:load /><div>
-		<h1 class="text-base md:text-5xl lg:text-9xl text-cyan-50">Hello World</h1>
+	<ParticlesComponent client:load />
+	<div class="h-screen w-screen flex flex-col justify-center items-center">
+		<nav class="flex gap-3 mb-5 text-sm">
+			{
+				navigation.map((item) => (
+					<a
+						href={item.href}
+						class="duration-500 ease-in-out text-zinc-500 hover:text-zinc-200"
+					>
+						{item.name}
+					</a>
+				))
+			}
+		</nav>
+
+		<h1
+			class="text-center text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-500"
+		>
+			Rafael Feitosa
+		</h1>
+		<h2 class="text-xl lg:text-2xl font-bold text-zinc-200 opacity-90">
+			Desenvolvedor Front-End
+		</h2>
+		<!--<span class="mt-3 text-xs font-medium text-zinc-400">TODO: mensagem de boas vindas</span>--->
+
+		<div class="flex items-center gap-3 mt-5 text-sm text-center">
+			{
+				social.map((item) => (
+					<a
+						href={item.href}
+						class="flex gap-1 duration-500 ease-in-out text-zinc-500 hover:text-zinc-200"
+					>
+						{item.name == 'LinkedIn' ? (
+							<FaLinkedin size={20} />
+						) : (
+							<FaGithub size={20} />
+						)}
+						{item.name}
+					</a>
+				))
+			}
+		</div>
 	</div>
 </Layout>

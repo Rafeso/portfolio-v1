@@ -27,6 +27,7 @@ export default function ParticlesComponent() {
 			enable: true,
 			zIndex: -1
 		},
+		//delay: 2,
 		interactivity: {
 			events: {
 				onHover: {
@@ -39,11 +40,11 @@ export default function ParticlesComponent() {
 		particles: {
 			color: {
 				value: '#444'
-			},
+			},			
 			move: {
-				direction: 'bottom',
+				direction: 'none',
 				enable: true,
-				speed: 0.4
+				speed: 0.4				
 			},
 			number: {
 				density: {
@@ -56,7 +57,7 @@ export default function ParticlesComponent() {
 				value: 1
 			},
 			size: {
-				value: 0.7
+				value: 0.8
 			}
 		},
 		detectRetina: true
@@ -68,6 +69,7 @@ export default function ParticlesComponent() {
 			init={particlesInit}
 			loaded={particlesLoaded}
 			options={options}
+			className='transition duration-100'
 		/>
 	);
 }
