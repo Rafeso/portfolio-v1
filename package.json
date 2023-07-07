@@ -11,7 +11,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/*": "prettier --write --ignore-unknown"
+    "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "@astrojs/react": "^2.2.1",
