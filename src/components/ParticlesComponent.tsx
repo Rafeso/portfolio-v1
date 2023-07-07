@@ -69,7 +69,6 @@ export default function ParticlesComponent() {
 			init={particlesInit}
 			loaded={particlesLoaded}
 			options={options}
-			className='transition duration-100'
 		/>
 	);
 }
