@@ -7,12 +7,14 @@ import navData from "../data/navData";
 ---
 
 <nav>
-  <div class="text-zinc-300 flex w-screen fixed justify-between p-7 animate-appear">
+  <div class="text-zinc-300 flex w-full justify-center fixed p-5 mt-5 animate-appear">
+    <div class="flex w-full lg:w-[60%] justify-between items-center ">
+
     <a href="/" aria-label="Go home">
       <Icon name="ph:arrow-left" width="30" />
     </a>
     <ul>
-      <li class="flex gap-3 mb-5 text-base font-medium">
+      <li class="flex gap-3 text-base font-medium">
         {
           navData.map((item) => (
             <Link
@@ -24,5 +26,6 @@ import navData from "../data/navData";
         }
       </li>
     </ul>
+    </div>
   </div>
 </nav>

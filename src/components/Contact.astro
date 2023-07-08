@@ -13,6 +13,7 @@ import socialData from '../data/socialData'
       <a
         href={item.href}
         class="flex gap-1 duration-500 ease-in-out text-zinc-500 hover:text-zinc-200"
+        target="_blank"
       >
         {item.name == 'LinkedIn' ? (
         <Icon name="line-md:linkedin" width="16" />
@@ -25,9 +26,9 @@ import socialData from '../data/socialData'
   }
 </div>
 
-<div class="text-center">
-  <span class="text-zinc-400 text-sm text-center"
-    >Se preferir, entre em contato por email 😄</span
+<div class="flex flex-col text-center">
+  <span class="flex gap-1 text-zinc-400 text-sm"
+    >Se preferir, entre em contato por email. <Icon name="twemoji:smiling-face-with-smiling-eyes" width="16"/></span
   >
   <ClipBoardCopy
     copyText="rafaefeitosa@gmail.com"
