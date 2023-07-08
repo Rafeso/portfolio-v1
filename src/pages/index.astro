@@ -3,11 +3,7 @@ import Contact from '../components/Contact.astro'
 import { ParticlesComponent } from '../components/ParticlesComponent';
 import Layout from '../layouts/Layout.astro';
 
-const navigation = [
-	{ name: 'Projetos', href: '/projects' },
-	{ name: 'Sobre mim', href: '/about' }
-];
-
+import navData from '../data/navData'
 
 ---
 
@@ -17,7 +13,7 @@ const navigation = [
 	<div class="h-screen w-screen flex flex-col justify-center items-center">
 		<nav class="flex gap-3 mb-5 text-sm">
 			{
-				navigation.map((item) => (
+				navData.map((item) => (
 					<a
 						href={item.href}
 						class="duration-500 ease-in-out text-zinc-500 hover:text-zinc-200"
