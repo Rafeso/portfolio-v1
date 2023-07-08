@@ -2,26 +2,22 @@
 import { ClipBoardCopy } from './ClipBoardCopy';
 import { Icon } from 'astro-icon';
 
-const social = [
-  { name: 'GitHub', href: 'https://github.com/Rafeso' },
-  {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/rafael-feitosa-souza/'
-  }
-];
+import socialData from '../data/socialData'
+
+
 ---
 
-<div class="flex items-center gap-3 mt-5 text-sm text-center">
+<div class="flex items-center gap-3 my-5 text-sm text-center">
   {
-    social.map((item) => (
+    socialData.map((item) => (
       <a
         href={item.href}
         class="flex gap-1 duration-500 ease-in-out text-zinc-500 hover:text-zinc-200"
       >
         {item.name == 'LinkedIn' ? (
-        <Icon name="linkedIn" width="13"/>
+        <Icon name="line-md:linkedin" width="16" />
         ) : (
-        <Icon name="github" width="13"/>
+        <Icon name="line-md:github" width="16"/>
         )}
         {item.name}
       </a>
@@ -29,12 +25,12 @@ const social = [
   }
 </div>
 
-<div class="text-center mt-5">
+<div class="text-center">
   <span class="text-zinc-400 text-sm text-center"
     >Se preferir, entre em contato por email 😄</span
   >
   <ClipBoardCopy
     copyText="rafaefeitosa@gmail.com"
-    client:load
+    client:visible
   />
 </div>
