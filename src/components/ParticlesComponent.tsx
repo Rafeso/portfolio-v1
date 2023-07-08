@@ -22,7 +22,7 @@ export function ParticlesComponent() {
 			}
 		},
 		fpsLimit: 120,
-		smooth: true,
+		//smooth: true,
 		fullScreen: {
 			enable: true,
 			zIndex: -1
