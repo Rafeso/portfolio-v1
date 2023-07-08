@@ -40,11 +40,11 @@ export function ParticlesComponent() {
 		particles: {
 			color: {
 				value: '#444'
-			},			
+			},
 			move: {
 				direction: 'none',
 				enable: true,
-				speed: 0.4				
+				speed: 0.4
 			},
 			number: {
 				density: {
@@ -72,3 +72,4 @@ export function ParticlesComponent() {
 		/>
 	);
 }
+
