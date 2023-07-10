@@ -25,15 +25,15 @@ export function ClipBoardCopy({ copyText }: clipBoardProps) {
 	};
 
 	return (
-		<div className="flex items-center justify-center">
+		<div className="flex items-center justify-center m-5">
 			<button onClick={handleCopyClick}>
 				{isCopied ? (
-					<span className="text-white text-sm flex gap-2 bg-green-600 h-7 text-center items-center mt-5 p-5 rounded-lg">
+					<span className="text-white text-sm flex gap-2 bg-green-600 h-7 text-center items-center  p-5 rounded-lg">
 						{copyText}
 						<FontAwesomeIcon icon={faClipboardCheck} />
 					</span>
 				) : (
-					<span className="text-white text-sm flex gap-2 bg-red-600 opacity-90 h-7 text-center items-center mt-5 p-5 rounded-lg">
+					<span className="text-white text-sm flex gap-2 bg-red-600 opacity-90 h-7 text-center items-center p-5 rounded-lg">
 						{copyText}
 						<FontAwesomeIcon icon={faClipboardList} />
 					</span>

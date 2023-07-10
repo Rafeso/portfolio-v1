@@ -1,5 +1,4 @@
 ---
-
 import Icon from 'astro-icon'
 
 interface Props {
@@ -10,7 +9,6 @@ interface Props {
 }
 
 const {text, href, classes, icon, ...rest} = Astro.props as Props
-
 ---
 
 <a href={href} class:list={[classes]} {...rest}>

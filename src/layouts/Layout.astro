@@ -31,14 +31,15 @@ const { title, description = "Portfolio Rafael Feitosa de Souza." } = Astro.prop
 		/>
 		<title>{title}</title>
 	</head>
-	<body class="bg-zinc-950 overflow-hidden">
-		<slot />
+	<body class="bg-zinc-950">
+			<slot />	
 	</body>
 </html>
 
 <style>
 	body {
 		font-family: 'Inter Variable', sans-serif;
+		-webkit-font-smoothing: antialiased;
 	}
 
 </style>

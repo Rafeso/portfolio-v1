@@ -9,11 +9,11 @@ import Link from '../components/Link.astro'
 ---
 
 <Layout title="Rafael Feitosa | Home">
-	<ParticlesComponent client:visible />
+	<ParticlesComponent client:load />
 
-	<div class="h-screen w-screen flex flex-col justify-center items-center animate-appear">
+	<div class="h-screen w-full flex flex-col justify-center items-center select-none animate-appear">
 		<ul>
-			<li class="flex gap-3 mb-5 text-sm">
+			<li class="flex gap-5 mb-5 text-sm">
 				{
 					navData.map((item) => (
 						<Link 
@@ -26,14 +26,17 @@ import Link from '../components/Link.astro'
 			</li>
 		</ul>
 
-		<h1
-			class="text-center text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-500"
-		>
-			Rafael Feitosa
-		</h1>
-		<h2 class="text-xl lg:text-2xl font-bold text-zinc-200 opacity-90">
-			Desenvolvedor Front-End
-		</h2>
+		<div class="flex flex-col text-center gap-2">
+			<h1
+				class="text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 via-zinc-400 to-zinc-600"
+			>
+				Rafael Feitosa
+			</h1>
+			<h2 class="text-lg lg:text-1xl font-bold text-zinc-400 opacity-90">
+				Desenvolvedor Front-End
+			</h2>
+		</div>
+		
 
 		<Contact/>
 

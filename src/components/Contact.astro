@@ -3,8 +3,6 @@ import { ClipBoardCopy } from './ClipBoardCopy';
 import { Icon } from 'astro-icon';
 
 import socialData from '../data/socialData'
-
-
 ---
 
 <div class="flex items-center gap-3 my-5 text-sm text-center">
@@ -32,6 +30,6 @@ import socialData from '../data/socialData'
   >
   <ClipBoardCopy
     copyText="rafaefeitosa@gmail.com"
-    client:visible
+    client:load
   />
 </div>

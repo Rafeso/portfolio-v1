@@ -22,7 +22,7 @@ export function ParticlesComponent() {
 			}
 		},
 		fpsLimit: 120,
-		//smooth: true,
+		smooth: true,
 		fullScreen: {
 			enable: true,
 			zIndex: -1
@@ -39,12 +39,12 @@ export function ParticlesComponent() {
 		},
 		particles: {
 			color: {
-				value: '#444'
+				value: '#52525b'
 			},
 			move: {
-				direction: 'none',
+				direction: 'bottom-left',
 				enable: true,
-				speed: 0.4
+				speed: 0.2
 			},
 			number: {
 				density: {
@@ -57,7 +57,7 @@ export function ParticlesComponent() {
 				value: 1
 			},
 			size: {
-				value: 0.8
+				value: 0.6
 			}
 		},
 		detectRetina: true
@@ -72,4 +72,9 @@ export function ParticlesComponent() {
 		/>
 	);
 }
+
+
+
+
+
 
