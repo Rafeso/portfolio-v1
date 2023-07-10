@@ -1,15 +1,16 @@
 ---
 import Contact from '../components/Contact.astro'
-import { ParticlesComponent } from '../components/ParticlesComponent';
+import { Particles } from '../components/Particles';
+import Link from '../components/Link.astro'
+
 import Layout from '../layouts/Layout.astro';
 
 import navData from '../data/navData'
-import Link from '../components/Link.astro'
 
 ---
 
 <Layout title="Rafael Feitosa | Home">
-	<ParticlesComponent client:load />
+	<Particles client:load />
 
 	<div class="h-screen w-full flex flex-col justify-center items-center select-none animate-appear">
 		<ul>

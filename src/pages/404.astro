@@ -1,37 +1,46 @@
 ---
-import { Icon } from "astro-icon"
-import { ParticlesComponent } from "../components/ParticlesComponent"
-import Layout from "../layouts/Layout.astro"
-import Link from "../components/Link.astro"
-import NavBar from "../components/NavBar.astro"
-
+import { Icon } from 'astro-icon';
+import { Particles } from '../components/Particles';
+import Layout from '../layouts/Layout.astro';
+import Link from '../components/Link.astro';
+import NavBar from '../components/NavBar.astro';
 ---
 
-<Layout title="Oops 404 | Not found" description="Not Found Page">
-  <ParticlesComponent client:load />
-  <NavBar/>
+<Layout
+  title="Oops 404 | Not found"
+  description="Not Found Page"
+>
+  <Particles client:load />
+  <NavBar />
 
-  <div class="h-screen w-full flex flex-col items-center justify-center text-center animate-appear  p-5 select-none">
-      <Icon name="twemoji:thinking-face" width="130" class="text-zinc-300 mb-2"/>
+  <div
+    class="h-screen w-full flex flex-col items-center justify-center text-center animate-appear p-5 select-none"
+  >
+    <Icon
+      name="twemoji:thinking-face"
+      width="130"
+      class="text-zinc-300 mb-2"
+    />
 
-      <h1 class="text-zinc-300 text-base md:text-lg lg:text-1xl text-center font-medium prose proses-m my-5">
-        Será que quando eu acordar amanhã já terão mais cinquenta frameworks front-end e infinitésimas libs para estudar?
-      </h1>
-      <h2 class="text-zinc-500 text-sm text-center font-medium prose prose-sm">
-        Ah Desculpe, não vi você ai infelizmente essa rota não existe.
-      </h2>
+    <h1
+      class="text-zinc-300 text-base md:text-lg lg:text-1xl text-center font-medium prose proses-m my-5"
+    >
+      Será que quando eu acordar amanhã já terão mais cinquenta frameworks
+      front-end e infinitésimas libs para estudar?
+    </h1>
+    <h2 class="text-zinc-500 text-sm text-center font-medium prose prose-sm">
+      Ah Desculpe, não vi você ai infelizmente essa rota não existe.
+    </h2>
 
-      <Link 
-        href="/" 
-        text="Página incial" 
-        icon={{
-          name:"ph:arrow-left",
-          side:"left",
-          width:"16"
-        }} 
-        classes="flex text-center items-center gap-2 mt-5 p-3 text-zinc-50 text-sm bg-zinc-900 rounded-lg hover:bg-zinc-800 duration-500 ease-in-out"
-      />
+    <Link
+      href="/"
+      text="Página incial"
+      icon={{
+        name: 'ph:arrow-left',
+        side: 'left',
+        width: '16'
+      }}
+      classes="flex text-center items-center gap-2 mt-5 p-3 text-zinc-50 text-sm bg-zinc-900 rounded-lg hover:bg-zinc-800 duration-500 ease-in-out"
+    />
   </div>
-
-    
 </Layout>

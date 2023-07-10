@@ -1,16 +1,16 @@
 import { useCallback } from 'react';
 import type { Container, Engine, ISourceOptions } from 'tsparticles-engine';
-import { Particles } from 'react-particles';
+import { Particles as ParticlesComponent } from 'react-particles';
 import { loadFull } from 'tsparticles';
 
-export function ParticlesComponent() {
+export function Particles() {
 	const particlesInit = useCallback(async (engine: Engine) => {
 		await loadFull(engine);
 	}, []);
 
 	const particlesLoaded = useCallback(
 		async (container: Container | undefined) => {
-			await console.log(container);
+		 	console.log(container);
 		},
 		[]
 	);
@@ -64,7 +64,7 @@ export function ParticlesComponent() {
 	};
 
 	return (
-		<Particles
+		<ParticlesComponent
 			id="tsparticles"
 			init={particlesInit}
 			loaded={particlesLoaded}

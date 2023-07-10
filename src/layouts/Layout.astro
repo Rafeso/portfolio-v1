@@ -5,7 +5,8 @@ export interface Props {
 	description?: string;
 }
 
-const { title, description = "Portfolio Rafael Feitosa de Souza." } = Astro.props;
+const { title, description = 'Portfolio Rafael Feitosa de Souza.' } =
+	Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -32,7 +33,7 @@ const { title, description = "Portfolio Rafael Feitosa de Souza." } = Astro.prop
 		<title>{title}</title>
 	</head>
 	<body class="bg-zinc-950">
-			<slot />	
+		<slot />
 	</body>
 </html>
 
@@ -41,6 +42,4 @@ const { title, description = "Portfolio Rafael Feitosa de Souza." } = Astro.prop
 		font-family: 'Inter Variable', sans-serif;
 		-webkit-font-smoothing: antialiased;
 	}
-
 </style>
-
