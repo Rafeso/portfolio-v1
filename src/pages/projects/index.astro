@@ -6,7 +6,7 @@ import { formatPosts } from '../../utils/formatPosts';
 import { CollectionEntry, getCollection } from 'astro:content';
 import Card from '../../components/Card.astro';
 import type { InferGetStaticPropsType } from 'astro';
-import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import ProjectsLayout from '../../layouts/ProjectsLayout.astro';
 
 const postEntries = await getCollection('posts');
 const formattedPosts: CollectionEntry<'posts'>[] = formatPosts(postEntries, {
@@ -14,7 +14,7 @@ const formattedPosts: CollectionEntry<'posts'>[] = formatPosts(postEntries, {
 });
 ---
 
-<ProjectLayout title="Rafael Feitosa | Projetos">
+<ProjectsLayout title="Rafael Feitosa | Projetos">
   <div class="relative pb-16">
     <NavBar />
     <div
@@ -48,4 +48,4 @@ const formattedPosts: CollectionEntry<'posts'>[] = formatPosts(postEntries, {
       </section>
     </div>
   </div>
-</ProjectLayout>
+</ProjectsLayout>
