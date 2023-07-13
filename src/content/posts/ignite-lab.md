@@ -1,9 +1,9 @@
 ---
-title: Coffe Delivery
-date: 03-20-2021
+title: Ignite Lab
+date: 04-03-2021
 description: Um ecommerce de café para praticar o roteamento do react router dom
 draft: false
-tag: React
+tag: Astro
 ---
 
 Nisi duis ex aliqua eu officia eiusmod duis magna pariatur. Irure laborum qui aliqua nulla esse cillum laborum aliquip nulla elit. Id id Lorem duis irure cillum culpa. Nulla sint et aliqua velit do. Nulla sit sit proident consectetur enim ullamco aliqua in reprehenderit ullamco officia.

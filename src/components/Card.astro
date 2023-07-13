@@ -13,7 +13,7 @@ const { data, url, tagType } = Astro.props;
 
 const Tag = tagType;
 
-const { title, date, description, category } = data;
+const { title, date, description, tag } = data;
 ---
 
 <div
@@ -22,8 +22,8 @@ const { title, date, description, category } = data;
   <article class="w-full h-full p-4 md:p-8 space-y-4">
     <div class="flex justify-between text-zinc-300 text-xs">
       <Link
-        href={`/category/${slugify(category)}`}
-        text={category}
+        href={`/tag/${slugify(tag)}/`}
+        text={tag}
       />
       {formatDate(date)}
     </div>

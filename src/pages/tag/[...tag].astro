@@ -1,0 +1,74 @@
+---
+import { getCollection, CollectionEntry } from 'astro:content';
+import { slugify } from '../../utils/slugify';
+import { formatPosts } from '../../utils/formatPosts';
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import NavBar from '../../components/NavBar.astro';
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { tag: slugify('React') },
+      props: { name: 'React' }
+    },
+    {
+      params: { tag: slugify('NodeJs') },
+      props: { name: 'NodeJs' }
+    },
+    {
+      params: { tag: slugify('NextJs') },
+      props: { name: 'NextJs' }
+    },
+    {
+      params: { tag: slugify('Astro') },
+      props: { name: 'Astro' }
+    }
+  ];
+}
+
+const { tag } = Astro.params;
+const { name } = Astro.props;
+
+const allPosts = await getCollection('posts');
+const formattedPosts: CollectionEntry<'posts'>[] = allPosts;
+const catPosts = formattedPosts.filter(
+  (post) => slugify(post.data.tag) === tag
+);
+---
+
+<Layout title={name}>
+  <div class="relative pb-16">
+    <NavBar />
+    <div
+      class="flex justify-center items-center px-6 pt-24 mx-auto max-w-full lg:px-8 md:space-y-16 md:pt-24 lg:pt-32"
+    >
+      <section class="max-w-7xl space-y-8 mx-auto lg:mx-0">
+        <div class="w-full lg:text-center">
+          <h1
+            class="text-3xl font-bold tracking-tight text-zinc-300 sm:text-4xl"
+          >
+            Projetos que utilizam <span
+              class="text-transparent bg-gradient-to-r bg-clip-text from-zinc-100 to-zinc-500"
+              >{name}</span
+            >
+          </h1>
+        </div>
+
+        <div class="w-full h-px bg-zinc-600/30"></div>
+
+        <div class="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2">
+          {
+            catPosts.map((post) => (
+              <Card
+                data={post.data}
+                url={post.slug}
+                tagType="h2"
+              />
+            ))
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
