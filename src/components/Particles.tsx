@@ -30,10 +30,6 @@ export function Particles() {
 		//delay: 2,
 		interactivity: {
 			events: {
-				onHover: {
-					enable: true,
-					mode: 'grab'
-				},
 				resize: true
 			}
 		},
@@ -69,6 +65,7 @@ export function Particles() {
 			init={particlesInit}
 			loaded={particlesLoaded}
 			options={options}
+			className='fixed -z-50'
 		/>
 	);
 }

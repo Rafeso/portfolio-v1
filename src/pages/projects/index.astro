@@ -1,8 +1,51 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { Particles } from '../../components/Particles';
+import NavBar from '../../components/NavBar.astro';
+import { formatPosts } from '../../utils/formatPosts';
+import { CollectionEntry, getCollection } from 'astro:content';
+import Card from '../../components/Card.astro';
+import type { InferGetStaticPropsType } from 'astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+
+const postEntries = await getCollection('posts');
+const formattedPosts: CollectionEntry<'posts'>[] = formatPosts(postEntries, {
+  limit: 3
+});
 ---
 
-<Layout title="Rafael Feitosa | Projetos">
-  <Particles client:load />
-</Layout>
+<ProjectLayout title="Rafael Feitosa | Projetos">
+  <div class="relative pb-16">
+    <NavBar />
+    <div
+      class="flex justify-center items-center px-6 pt-24 mx-auto max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32"
+    >
+      <section class="max-w-4xl space-y-8 mx-auto lg:mx-0">
+        <div class="w-full lg:text-center">
+          <h1
+            class="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl"
+          >
+            Meus Projetos
+          </h1>
+          <p class="mt-4 text-zinc-400">
+            Projetos que desenvolvi durante os estudos.
+          </p>
+        </div>
+
+        <div class="w-full h-px bg-zinc-600/30"></div>
+
+        <div class="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2">
+          {
+            formattedPosts.map((post) => (
+              <Card
+                data={post.data}
+                url={post.slug}
+                tagType="h2"
+              />
+            ))
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+</ProjectLayout>

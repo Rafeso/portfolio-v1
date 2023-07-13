@@ -1,8 +1,8 @@
 ---
-import Icon from 'astro-icon';
+import { Icon } from 'astro-icon';
 
 interface Props {
-  text: string;
+  text?: string;
   href: string;
   classes?: string;
   icon?: { name: string; side: 'left' | 'right'; width: string };

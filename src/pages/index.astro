@@ -1,25 +1,26 @@
 ---
-import Contact from '../components/Contact.astro'
+import Contact from '../components/Contact.astro';
 import { Particles } from '../components/Particles';
-import Link from '../components/Link.astro'
+import Link from '../components/Link.astro';
 
 import Layout from '../layouts/Layout.astro';
 
-import navData from '../data/navData'
-
+import navData from '../data/navData';
 ---
 
 <Layout title="Rafael Feitosa | Home">
 	<Particles client:load />
 
-	<div class="h-screen w-full flex flex-col justify-center items-center select-none animate-appear">
+	<div
+		class="h-screen w-full flex flex-col justify-center items-center select-none animate-appear"
+	>
 		<ul>
 			<li class="flex gap-5 mb-5 text-sm">
 				{
 					navData.map((item) => (
-						<Link 
-							href={item.href} 
-							text={item.name} 
+						<Link
+							href={item.href}
+							text={item.name}
 							classes="duration-500 ease-in-out text-zinc-500 hover:text-zinc-200"
 						/>
 					))
@@ -37,9 +38,7 @@ import navData from '../data/navData'
 				Desenvolvedor Front-End
 			</h2>
 		</div>
-		
 
-		<Contact/>
-
+		<Contact />
 	</div>
 </Layout>
