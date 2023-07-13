@@ -4,8 +4,8 @@ export function formatPosts(
 		filterOutDrafts = true,
 		filterOutFuturePosts = true,
 		sortByDate = true,
-		limit = 0
-	} = {}
+		limit = 0,
+	} = {},
 ) {
 	const filteredPosts = posts.reduce((acc, post) => {
 		const { date, draft } = post.data;
@@ -25,7 +25,7 @@ export function formatPosts(
 		filteredPosts.sort(() => Math.random() - 0.5);
 	}
 
-	if (typeof limit === 'number') {
+	if (typeof limit === "number") {
 		return filteredPosts.slice(0, limit);
 	}
 	return filteredPosts;

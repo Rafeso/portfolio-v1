@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint":  "rome format --write"
+    "format":  "rome format src --write",
+    "lint": "rome check src"
   },
   "dependencies": {
     "@astrojs/react": "^2.2.1",
