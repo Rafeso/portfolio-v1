@@ -1,9 +1,9 @@
 ---
-title: Ignite Lab
+title: Code Lab
 date: 04-03-2021
 description: Um ecommerce de café para praticar o roteamento do react router dom
 draft: false
-image: ../src/assets/coffeedelivery.png
+image: ../src/assets/ignitelab.png
 tag: Astro
 ---
 
