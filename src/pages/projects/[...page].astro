@@ -1,22 +1,18 @@
 ---
 // @ts-nocheck
 
-import Layout from '../../layouts/Layout.astro';
-import { Particles } from '../../components/Particles';
-import NavBar from '../../components/NavBar.astro';
-import { formatPosts } from '../../utils/formatPosts';
+import NavBar from '@components/NavBar.astro';
+import { formatPosts } from '@utils/formatPosts';
 import { CollectionEntry, getCollection } from 'astro:content';
-import Card from '../../components/Card.astro';
-import type { InferGetStaticPropsType, Page } from 'astro';
-import ProjectsLayout from '../../layouts/ProjectsLayout.astro';
-import Pagination from '../../components/Pagination.astro';
-import type { ZodAny } from 'astro/zod'
-import Tags from '../../components/Tags.astro'
+import Card from '@components/Card.astro';
+import ProjectsLayout from '@layouts/ProjectsLayout.astro';
+import Pagination from '@components/Pagination.astro';
+import Tags from '@components/Tags.astro'
 
 export async function getStaticPaths({ paginate }) {
   const postEntries = await getCollection('posts');
   const formattedPosts: CollectionEntry<'posts'>[] = formatPosts(postEntries, {
-    limit: 3
+    limit: 20
   });
 
   return paginate(formattedPosts, { pageSize: 4 });
@@ -25,7 +21,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<ProjectsLayout title="Rafael Feitosa | Projetos">
+<ProjectsLayout>
   <div class="relative pb-16">
     <NavBar />
     <div
@@ -50,6 +46,7 @@ const { page } = Astro.props;
           {
             page.data.map((post) => (
               <Card
+                tags={post.data.tag}
                 data={post.data}
                 url={post.slug}
                 tagType="h2"

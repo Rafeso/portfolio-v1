@@ -8,8 +8,7 @@ const postsCollection = defineCollection({
 			.object({
 				src: z.string(),
 				alt: z.string(),
-			})
-			.optional(),
+			}),
 		description: z
 			.string()
 			.max(

@@ -6,5 +6,8 @@ import rome from "astro-rome";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), rome()]
+  integrations: [tailwind(), react(), rome()],
+  experimental: {
+    assets: true
+  }
 });

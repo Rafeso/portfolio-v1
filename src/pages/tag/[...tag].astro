@@ -1,10 +1,9 @@
 ---
 import { getCollection, CollectionEntry } from 'astro:content';
-import { slugify } from '../../utils/slugify';
-import { formatPosts } from '../../utils/formatPosts';
-import Layout from '../../layouts/Layout.astro';
-import Card from '../../components/Card.astro';
-import NavBar from '../../components/NavBar.astro';
+import { slugify } from '@utils/slugify';
+import Layout from '@layouts/Layout.astro';
+import Card from '@components/Card.astro';
+import NavBar from '@components/NavBar.astro';
 
 export async function getStaticPaths() {
   return [
@@ -32,7 +31,7 @@ const { name } = Astro.props;
 
 const allPosts = await getCollection('posts');
 const formattedPosts: CollectionEntry<'posts'>[] = allPosts;
-const catPosts = formattedPosts.filter(
+const tagPosts = formattedPosts.filter(
   (post) => slugify(post.data.tag) === tag
 );
 ---
@@ -59,7 +58,7 @@ const catPosts = formattedPosts.filter(
 
         <div class="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2">
           {
-            catPosts.map((post) => (
+            tagPosts.map((post) => (
               <Card
                 data={post.data}
                 url={post.slug}
