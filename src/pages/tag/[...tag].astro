@@ -1,38 +1,38 @@
 ---
-import { getCollection, CollectionEntry } from 'astro:content';
-import { slugify } from '@utils/slugify';
-import Layout from '@layouts/Layout.astro';
-import Card from '@components/Card.astro';
-import NavBar from '@components/NavBar.astro';
+import { getCollection, CollectionEntry } from "astro:content";
+import { slugify } from "@utils/slugify";
+import Layout from "@layouts/Layout.astro";
+import Card from "@components/Card.astro";
+import NavBar from "@components/NavBar.astro";
 
 export async function getStaticPaths() {
   return [
     {
-      params: { tag: slugify('React') },
-      props: { name: 'React' }
+      params: { tag: slugify("React") },
+      props: { name: "React" },
     },
     {
-      params: { tag: slugify('NodeJs') },
-      props: { name: 'NodeJs' }
+      params: { tag: slugify("NodeJs") },
+      props: { name: "NodeJs" },
     },
     {
-      params: { tag: slugify('NextJs') },
-      props: { name: 'NextJs' }
+      params: { tag: slugify("NextJs") },
+      props: { name: "NextJs" },
     },
     {
-      params: { tag: slugify('Astro') },
-      props: { name: 'Astro' }
-    }
+      params: { tag: slugify("Astro") },
+      props: { name: "Astro" },
+    },
   ];
 }
 
 const { tag } = Astro.params;
 const { name } = Astro.props;
 
-const allPosts = await getCollection('posts');
-const formattedPosts: CollectionEntry<'posts'>[] = allPosts;
+const allPosts = await getCollection("posts");
+const formattedPosts: CollectionEntry<"posts">[] = allPosts;
 const tagPosts = formattedPosts.filter(
-  (post) => slugify(post.data.tag) === tag
+  (post) => slugify(post.data.tag) === tag,
 );
 ---
 
@@ -59,11 +59,7 @@ const tagPosts = formattedPosts.filter(
         <div class="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2">
           {
             tagPosts.map((post) => (
-              <Card
-                data={post.data}
-                url={post.slug}
-                tagType="h2"
-              />
+              <Card data={post.data} url={post.slug} tagType="h2" />
             ))
           }
         </div>

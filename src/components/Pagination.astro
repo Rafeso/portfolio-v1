@@ -1,5 +1,5 @@
 ---
-import Link from './Link.astro';
+import Link from "./Link.astro";
 
 const { prevUrl, nextUrl } = Astro.props;
 ---
@@ -11,12 +11,12 @@ const { prevUrl, nextUrl } = Astro.props;
         text="Previous"
         href={prevUrl}
         icon={{
-          name: 'ph:arrow-left',
-          side: 'left',
-          width: '16'
+          name: "ph:arrow-left",
+          side: "left",
+          width: "16",
         }}
         aria-label="Previous Page"
-        classes='w-full flex  justify-center text-zinc-50 text-base gap-2'
+        classes="w-full flex justify-center text-zinc-50 text-base gap-2"
       />
     )
   }
@@ -26,12 +26,12 @@ const { prevUrl, nextUrl } = Astro.props;
         text="Next"
         href={nextUrl}
         icon={{
-          name: 'ph:arrow-right',
-          side: 'right',
-          width: '16'
+          name: "ph:arrow-right",
+          side: "right",
+          width: "16",
         }}
         aria-label="Next Page"
-        classes='w-full flex  justify-center text-zinc-50 text-base gap-2'
+        classes="w-full flex  justify-center text-zinc-50 text-base gap-2"
       />
     )
   }

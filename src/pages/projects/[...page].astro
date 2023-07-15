@@ -1,18 +1,18 @@
 ---
 // @ts-nocheck
 
-import NavBar from '@components/NavBar.astro';
-import { formatPosts } from '@utils/formatPosts';
-import { CollectionEntry, getCollection } from 'astro:content';
-import Card from '@components/Card.astro';
-import ProjectsLayout from '@layouts/ProjectsLayout.astro';
-import Pagination from '@components/Pagination.astro';
-import Tags from '@components/Tags.astro'
+import NavBar from "@components/NavBar.astro";
+import { formatPosts } from "@utils/formatPosts";
+import { CollectionEntry, getCollection } from "astro:content";
+import Card from "@components/Card.astro";
+import ProjectsLayout from "@layouts/ProjectsLayout.astro";
+import Pagination from "@components/Pagination.astro";
+import Tags from "@components/Tags.astro";
 
 export async function getStaticPaths({ paginate }) {
-  const postEntries = await getCollection('posts');
-  const formattedPosts: CollectionEntry<'posts'>[] = formatPosts(postEntries, {
-    limit: 20
+  const postEntries = await getCollection("posts");
+  const formattedPosts: CollectionEntry<"posts">[] = formatPosts(postEntries, {
+    limit: 20,
   });
 
   return paginate(formattedPosts, { pageSize: 4 });
@@ -37,7 +37,7 @@ const { page } = Astro.props;
           <p class="mt-4 text-zinc-400">
             Projetos que desenvolvi durante os estudos.
           </p>
-          <Tags/>
+          <Tags />
         </div>
 
         <div class="w-full h-px bg-zinc-600/30"></div>
@@ -54,10 +54,7 @@ const { page } = Astro.props;
             ))
           }
         </div>
-        <Pagination
-          prevUrl={page.url.prev}
-          nextUrl={page.url.next}
-        />
+        <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
       </section>
     </div>
   </div>

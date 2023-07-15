@@ -1,36 +1,22 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 interface Props {
   text?: string;
   href: string;
   classes?: string;
-  icon?: { name: string; side: 'left' | 'right'; width: string };
+  icon?: { name: string; side: "left" | "right"; width: string };
 }
 
 const { text, href, classes, icon, ...rest } = Astro.props as Props;
 ---
 
-<a
-  href={href}
-  class:list={[classes]}
-  {...rest}
->
-  {
-    icon && icon.side === 'left' && (
-      <Icon
-        name={icon.name}
-        width={icon.width}
-      />
-    )
-  }
+<a href={href} class:list={[classes]} {...rest}>
+  {icon && icon.side === "left" && <Icon name={icon.name} width={icon.width} />}
   {text}
   {
-    icon && icon.side === 'right' && (
-      <Icon
-        name={icon.name}
-        width={icon.width}
-      />
+    icon && icon.side === "right" && (
+      <Icon name={icon.name} width={icon.width} />
     )
   }
 </a>

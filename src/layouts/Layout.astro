@@ -1,45 +1,32 @@
 ---
-import '@fontsource-variable/inter';
+import "@fontsource-variable/inter";
 export interface Props {
-	title: string;
-	description?: string;
+  title: string;
+  description?: string;
 }
 
-const { title, description = 'Portfolio Rafael Feitosa de Souza.' } =
-	Astro.props;
+const { title, description = "Portfolio Rafael Feitosa de Souza." } =
+  Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content={description}
-		/>
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1"
-		/>
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/favicon.svg"
-		/>
-		<meta
-			name="generator"
-			content={Astro.generator}
-		/>
-		<title>{title}</title>
-	</head>
-	<body class="bg-zinc-950">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-zinc-950">
+    <slot />
+  </body>
 </html>
 
 <style>
-	body {
-		font-family: 'Inter Variable', sans-serif;
-		-webkit-font-smoothing: antialiased;
-	}
+  body {
+    font-family: "Inter Variable", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
 </style>

@@ -1,13 +1,16 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
-import { slugify } from '@utils/slugify';
+import { getCollection, type CollectionEntry } from "astro:content";
+import { slugify } from "@utils/slugify";
 
-const allPosts = await getCollection('posts');
-const formattedPosts: CollectionEntry<'posts'>[] = allPosts;
+const allPosts = await getCollection("posts");
+const formattedPosts: CollectionEntry<"posts">[] = allPosts;
 const allCategories = formattedPosts.map((cat) => cat.data.tag).flat();
 ---
 
-<ul class="flex w-full justify-center gap-3 text-sm mt-5" aria-label="Portfolio tags">
+<ul
+  class="flex w-full justify-center gap-3 text-sm mt-5"
+  aria-label="Portfolio tags"
+>
   {
     allCategories.map((key) => (
       <li>
