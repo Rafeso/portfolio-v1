@@ -3,6 +3,7 @@ import { CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import NavBar from "@components/NavBar.astro";
 import { Image } from "astro:assets";
+import Link from "@components/Link.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
@@ -19,7 +20,7 @@ interface Props {
 
 const { entry } = Astro.props;
 
-const { title, description, date, image } = entry.data;
+const { title, description, date, image, repository, website } = entry.data;
 const { Content } = await entry.render();
 ---
 
@@ -30,29 +31,52 @@ const { Content } = await entry.render();
       class="flex flex-col justify-center items-center px-6 pt-24 lg:px-8 md:space-y-16 md:pt-24 lg:pt-32"
     >
       <article
-        class="prose prose-sm md:prose-lg prose-headings:underline prose-headings:text-zinc-300 prose-p:text-zinc-400 prose-p:leading-loose prose-p:text-justify"
+        class="prose prose-sm md:prose-lg prose-headings:underline prose-headings:text-zinc-300 prose-p:text-zinc-400 prose-p:leading-loose prose-p:text-justify pb-16"
       >
-        <header class="flex flex-col text-center gap-3">
+        <section class="flex flex-col text-center gap-3">
           <span
             class="underline decoration-zinc-500/60 hover:decoration-zinc-500 duration-200 font-semibold select-none text-zinc-300 text-sm"
             >{date}</span
           >
-          <h1 class="decoration-violet-800">{title}</h1>
+          <h1 class="decoration-violet-900">{title}</h1>
           <h2 class="decoration-violet-900">
             {description}
           </h2>
-          <div
-            class="relative contrast-250 brightness-90 pointer-events-none select-none"
-          >
+          <div class="flex w-full justify-center items-center gap-2">
+            <Link
+              href={repository}
+              text="Repositório"
+              icon={{ name: "charm:github", side: "left", width: "18" }}
+              classes="flex gap-1 text-zinc-400 hover:text-zinc-200 duration-500 hover:decoration-violet-900"
+            />
+            {
+              website != undefined && (
+                <>
+                  <div class="w-px h-4 bg-zinc-500" />
+                  <Link
+                    href={website}
+                    text="Website"
+                    icon={{
+                      name: "ion:ios-world-outline",
+                      side: "left",
+                      width: "18",
+                    }}
+                    classes="flex gap-1 text-zinc-400 hover:text-zinc-200 duration-500 hover:decoration-violet-900"
+                  />
+                </>
+              )
+            }
+          </div>
+          <div class="relative brightness-90 pointer-events-none select-none">
             <Image
               src={image}
-              alt="Logo"
+              alt="Website preview"
               width={730}
               height={540}
               quality={100}
             />
           </div>
-        </header>
+        </section>
         <Content />
       </article>
     </div>
