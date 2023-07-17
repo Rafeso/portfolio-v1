@@ -4,9 +4,9 @@ import react from "@astrojs/react";
 import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
-import vercel from '@astrojs/vercel/edge';
-
 import robotsTxt from "astro-robots-txt";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
