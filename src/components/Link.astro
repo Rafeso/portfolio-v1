@@ -6,13 +6,15 @@ interface Props {
   href: string;
   classes?: string;
   icon?: { name: string; side: "left" | "right"; width: string };
-  target?: string
+  target?: string;
+  rel?: string;
 }
 
-const { text, href, classes, icon, target, ...rest } = Astro.props as Props;
+const { text, href, classes, icon, target, rel, ...rest } =
+  Astro.props as Props;
 ---
 
-<a href={href} class:list={[classes]} target={target} {...rest}>
+<a href={href} class:list={[classes]} target={target} rel={rel} {...rest}>
   {icon && icon.side === "left" && <Icon name={icon.name} width={icon.width} />}
   {text}
   {
