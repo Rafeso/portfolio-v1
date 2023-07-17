@@ -6,12 +6,12 @@ import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
 import robotsTxt from "astro-robots-txt";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rafael-feitosa.vercel.app',
-  output: 'hybrid',
+  output: 'static',
   adapter: vercel({
     analytics: true,
   }),
