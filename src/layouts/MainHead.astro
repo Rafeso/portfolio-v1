@@ -1,0 +1,39 @@
+---
+import { SEO } from "astro-seo";
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+
+  <SEO
+    openGraph={{
+      basic: {
+        title: "Portfólio de Rafael Feitosa",
+        type: "website",
+        image: "https://rafael-feitosa.vercel.app/assets/preview.png",
+      },
+      optional: {
+        locale: "pt_BR",
+      },
+    }}
+    twitter={{
+      card: "app",
+      title: "Portfólio de Rafael Feitosa",
+      image: "https://rafael-feitosa.vercel.app/assets/preview.png",
+      imageAlt: "Preview da página inicial do website",
+      description: "Portfólio com os projetos de Rafael Feitosa desenvolvedor front-end",
+    }}
+  />
+</head>

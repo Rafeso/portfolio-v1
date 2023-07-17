@@ -1,24 +1,20 @@
 ---
 import "@fontsource-variable/inter";
+import MainHead from "@layouts/MainHead.astro"
+
 export interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = "Portfolio de Rafael Feitosa de Souza." } =
-  Astro.props;
+const { title, description } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <MainHead title={title} description={description} />
   </head>
   <body class="bg-zinc-950">
     <slot />
