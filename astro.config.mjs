@@ -11,7 +11,7 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rafael-feitosa.vercel.app',
-  output: 'server',
+  output: 'hybrid',
   adapter: vercel({
     analytics: true,
   }),
