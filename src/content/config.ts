@@ -18,7 +18,7 @@ const postsCollection = defineCollection({
 		draft: z.boolean().default(false),
 		website: z.string().optional(),
 		repository: z.string(),
-		tag: z.enum(["React", "NextJs", "NodeJs", "Astro"]),
+		tag: z.enum(["ReactJs", "NextJs", "NodeJs", "Astro"]),
 	}),
 });
 
