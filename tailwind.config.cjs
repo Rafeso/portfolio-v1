@@ -7,7 +7,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['InterVariable', 'Inter', ...defaultTheme.fontFamily.sans]
+				sans: ['Inter', ...defaultTheme.fontFamily.sans]
 			},
 			keyframes: {
 				appear: {
@@ -16,7 +16,7 @@ module.exports = {
 				},
 			},
 			animation: {
-				appear: 'appear 1.5s ease-in-out'
+				appear: 'appear 0.5s'
 			}
 		}
 	},
