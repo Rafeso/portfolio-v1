@@ -13,9 +13,17 @@ import navData from "../data/navData";
     <div
       class="container flex text-zinc-300 w-full justify-between items-center mx-auto p-6"
     >
-      <a href="/" aria-label="Go home">
-        <Icon name="ph:arrow-left" width="24" />
-      </a>
+      <Link
+        text="Home"
+        href="/"
+        aria-label="Go home"
+        icon={{
+          name: "ph:arrow-left",
+          side: "left",
+          width: "24",
+        }}
+        classes="flex gap-1 text-sm items-center duration-500 hover:text-zinc-50"
+      />
       <ul>
         <li class="flex gap-4 text-sm">
           {
