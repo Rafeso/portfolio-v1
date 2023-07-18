@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://rafael-feitosa.vercel.app"><h1 align="center">rafael-feitosa.vercel.app</h1></a>
+    <a href="https://rafael-feitosa.vercel.app"><h1 align="center">Meu portfólio 😎</h1></a>
     
 Meu site pessoal, construido com [Astro](https://astro.build), [React](https://pt-br.legacy.reactjs.org), [Tailwind CSS](https://tailwindcss.com/), e hospedado na [Vercel](https://vercel.com/).
 
@@ -8,7 +8,7 @@ Meu site pessoal, construido com [Astro](https://astro.build), [React](https://p
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Rafeso/portfolio-v1"/>
   
   <a href="https://github.com/Rafeso/portfolio-v1/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Rafeso/github_blog"/>
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Rafeso/portfolio-v1"/>
   </a>
     
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
@@ -37,4 +37,4 @@ npm run dev
 
 ## Clone / Fork
 
-Este repositório pode ser usado como inspiração e também aceita contribuição de qualquer tipo, em caso de fork ou clone retire somente todas as minhas informações pessoais. No mais sintam-se livres para contribuir com o repositório ou fazer sua própai versão dele.
+Este repositório pode ser usado como inspiração e também aceita contribuição de qualquer tipo, em caso de fork ou clone retire somente todas as minhas informações pessoais. No mais sintam-se livres para contribuir com o repositório ou fazer sua própia versão dele.
