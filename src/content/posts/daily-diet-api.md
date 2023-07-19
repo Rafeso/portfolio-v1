@@ -3,7 +3,7 @@ title: Daily Diet API
 date: 03-18-2023
 description: Uma API para controle de dieta diária
 draft: false
-image: /assets/dailydietapi.png
+image: /assets/dailydietapi.webp
 repository: https://github.com/Rafeso/daily-diet-api
 tag: NodeJs
 ---

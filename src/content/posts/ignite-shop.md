@@ -3,7 +3,7 @@ title: Ignite Shop
 date: 03-14-2023
 description: Uma aplicação com integração na API do Stripe
 draft: false
-image: /assets/igniteshop.png
+image: /assets/igniteshop.webp
 repository: https://github.com/Rafeso/Ignite_Shop
 website: https://ignite-shop-rafeso.vercel.app
 tag: NextJs
