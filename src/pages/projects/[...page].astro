@@ -7,7 +7,6 @@ import { CollectionEntry, getCollection } from "astro:content";
 import Card from "@components/Card.astro";
 import ProjectsLayout from "@layouts/ProjectsLayout.astro";
 import Pagination from "@components/Pagination.astro";
-import Tags from "@components/Tags.astro";
 
 export async function getStaticPaths({ paginate }) {
   const postEntries = await getCollection("posts");
