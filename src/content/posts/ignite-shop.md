@@ -1,7 +1,7 @@
 ---
 title: Ignite Shop
 date: 03-14-2023
-description: Uma aplicação com integração na API do Stripe.
+description: Uma aplicação com integração na API do Stripe
 draft: false
 image: /assets/igniteshop.png
 repository: https://github.com/Rafeso/Ignite_Shop

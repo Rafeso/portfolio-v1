@@ -1,7 +1,7 @@
 ---
 title: GitHub Blog
 date: 03-08-2023
-description: Um blog que utiliza da API do GitHub para buscar issues de um repositório.
+description: Um blog que utiliza da API do GitHub para buscar issues de um repositório
 draft: false
 image: /assets/githublog.png
 repository: https://github.com/Rafeso

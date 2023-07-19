@@ -1,7 +1,7 @@
 ---
 title: Coffe Delivery
 date: 03-20-2023
-description: Um ecommerce de café para praticar o roteamento do react router dom
+description: Uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia
 draft: false
 image: /assets/coffeedelivery.png
 repository: https://github.com/Rafeso/coffee_delivery

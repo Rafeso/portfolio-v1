@@ -1,7 +1,7 @@
 ---
 title: Todo List
 date: 11-17-2022
-description: ToDo para organizar seus itens a fazer.
+description: ToDo para organizar seus itens a fazer
 draft: false
 image: /assets/todolist.png
 repository: https://github.com/Rafeso/IgniteToDo

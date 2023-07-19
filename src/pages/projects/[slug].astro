@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import NavBar from "@components/NavBar.astro";
 import { Image } from "astro:assets";
 import Link from "@components/Link.astro";
-import { formatDate } from "@utils/formatDate"
+import { formatDate } from "@utils/formatDate";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
@@ -34,7 +34,7 @@ const { Content } = await entry.render();
       <article
         class="prose prose-sm md:prose-lg prose-headings:underline prose-headings:text-zinc-300 text-zinc-400 prose-p:leading-loose prose-p:text-justify pb-16 prose-a:underline prose-a:text-zinc-300 prose-a:decoration-violet-900 prose-ul:text-sm"
       >
-        <section class="flex flex-col text-center gap-3">
+        <div class="text-center">
           <span
             class="underline decoration-zinc-500/60 hover:decoration-zinc-500 duration-200 font-semibold select-none text-zinc-300 text-sm"
             >{formatDate(date)}</span
@@ -43,45 +43,45 @@ const { Content } = await entry.render();
           <h2 class="decoration-violet-900">
             {description}
           </h2>
-          <div class="flex w-full justify-center items-center gap-2">
-            <Link
-              href={repository}
-              text="Repositório"
-              icon={{ name: "charm:github", side: "left", width: "18" }}
-              classes="flex gap-1 text-zinc-400 hover:text-zinc-200 duration-500 hover:decoration-violet-900"
-              target="_blank"
-            />
-            {
-              website != undefined && (
-                <>
-                  <div class="w-px h-4 bg-zinc-500" />
-                  <Link
-                    href={website}
-                    text="Website"
-                    icon={{
-                      name: "ion:ios-world-outline",
-                      side: "left",
-                      width: "18",
-                    }}
-                    classes="flex gap-1 text-zinc-400 hover:text-zinc-200 duration-500 hover:decoration-violet-900"
-                    target="_blank"
-                  />
-                </>
-              )
-            }
-          </div>
-          <div class="relative brightness-100 pointer-events-none select-none">
-            <Image
-              src={image}
-              alt="Website preview"
-              format="webp"
-              width={730}
-              height={540}
-              quality={100}
-              
-            />
-          </div>
-        </section>
+        </div>
+        <div class="flex w-full justify-center items-center gap-2">
+          <Link
+            href={repository}
+            text="Repositório"
+            icon={{ name: "charm:github", side: "left", width: "18" }}
+            classes="flex gap-1 text-zinc-400 hover:text-zinc-200 duration-500 hover:decoration-violet-900"
+            target="_blank"
+          />
+          {
+            website != undefined && (
+              <>
+                <div class="w-px h-4 bg-zinc-500" />
+                <Link
+                  href={website}
+                  text="Website"
+                  icon={{
+                    name: "ion:ios-world-outline",
+                    side: "left",
+                    width: "18",
+                  }}
+                  classes="flex gap-1 text-zinc-400 hover:text-zinc-200 duration-500 hover:decoration-violet-900"
+                  target="_blank"
+                />
+              </>
+            )
+          }
+        </div>
+        <div class="relative brightness-100 pointer-events-none select-none">
+          <Image
+            src={image}
+            alt="Website preview"
+            format="webp"
+            width={730}
+            height={540}
+            quality={100}
+          />
+        </div>
+
         <Content />
       </article>
     </div>
