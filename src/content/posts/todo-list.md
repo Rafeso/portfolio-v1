@@ -3,7 +3,7 @@ title: Todo List
 date: 11-17-2022
 description: ToDo para organizar seus itens a fazer
 draft: false
-image: /assets/todolist.webp
+image: https://i.ibb.co/bRcv8xJ/todolist.webp
 repository: https://github.com/Rafeso/IgniteToDo
 website: https://todo-code.vercel.app
 tag: ReactJs

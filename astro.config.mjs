@@ -15,7 +15,7 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
-  integrations: [tailwind(), react(), compress(), sitemap(), prefetch(), robotsTxt()],
+  integrations: [tailwind(), react(), compress(), sitemap(), prefetch({throttle:3}), robotsTxt()],
   experimental: {
     assets: true
   }

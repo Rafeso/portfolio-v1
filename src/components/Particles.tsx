@@ -31,6 +31,10 @@ export function Particles() {
     interactivity: {
       events: {
         resize: true,
+        onHover: {
+          enable: true,
+          mode: "connect",
+        },
       },
     },
     particles: {
@@ -47,7 +51,7 @@ export function Particles() {
           enable: true,
           area: 100,
         },
-        value: 15,
+        value: 20,
       },
       opacity: {
         value: 1,

@@ -21,8 +21,7 @@ const { page } = Astro.props;
 ---
 
 <ProjectsLayout>
-  <div class="h-screen pb-16">
-    <NavBar />
+  <NavBar />
     <div
       class="flex justify-center items-center px-6 pt-24 mx-auto max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32 pb-16"
     >
@@ -55,5 +54,4 @@ const { page } = Astro.props;
         <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
       </section>
     </div>
-  </div>
 </ProjectsLayout>

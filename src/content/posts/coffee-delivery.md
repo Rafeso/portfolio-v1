@@ -3,7 +3,7 @@ title: Coffe Delivery
 date: 03-20-2023
 description: Uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia
 draft: false
-image: /assets/coffeedelivery.webp
+image: https://i.ibb.co/1sPcYtW/coffeedelivery.webp
 repository: https://github.com/Rafeso/coffee_delivery
 website: https://coffee-delivery-.bohr.io
 tag: ReactJs
