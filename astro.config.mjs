@@ -18,6 +18,5 @@ export default defineConfig({
   integrations: [tailwind(), react(), compress(), sitemap(), prefetch({throttle:3}), robotsTxt()],
   experimental: {
     assets: true,
-    viewTransitions: true,
   }
 });
