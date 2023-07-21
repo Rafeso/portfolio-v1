@@ -66,7 +66,7 @@ $ npm run dev
 
 ```
 
-<a href="#-----meu-portfólio-">**Voltar para o Topo**</a>
+<a href="#-----meu-portfólio--">**Voltar para o Topo**</a>
 
 <br>
 
@@ -87,7 +87,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Ícones: **[Astro Icon](https://github.com/natemoo-re/astro-icon#readme)**, **[Phosphor icons](https://phosphoricons.com)**
 - Fontes: **[Inter](https://fonts.google.com/specimen/Inter?query=Inter)**
 
-<a href="#-----meu-portólio-">**Voltar para o Topo**</a>
+<a href="#-----meu-portfólio--">**Voltar para o Topo**</a>
 
 <br>
 
