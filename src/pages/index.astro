@@ -6,13 +6,14 @@ import Link from "@components/Link.astro";
 import Layout from "@layouts/Layout.astro";
 
 import navData from "../data/navData";
+import { fade } from "astro/dist/transitions"
 ---
 
 <Layout
   title="Rafael Feitosa | Home"
   description="Portfólio com os projetos de Rafael Feitosa - Desenvolvedor front-end"
 >
-  <Particles client:idle />
+  <Particles client:idle transition:animate="morph" />
 
   <div
     class="h-screen w-full flex flex-col justify-center items-center select-none animate-appear"

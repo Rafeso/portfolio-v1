@@ -84,7 +84,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 #### **Utilitários**
 
 - Editor: **[Visual Studio Code](https://code.visualstudio.com/)** → Extensions: **[Prettier](https://prettier.io/)**
-- Ícones: **[Astro Icon](https://github.com/natemoo-re/astro-icon#readme)**, **[Font Awesome](https://fontawesome.com/icons)**
+- Ícones: **[Astro Icon](https://github.com/natemoo-re/astro-icon#readme)**, **[Phosphor icons](https://phosphoricons.com)**
 - Fontes: **[Inter](https://fonts.google.com/specimen/Inter?query=Inter)**
 
 <a href="#-----meu-portólio-">**Voltar para o Topo**</a>

@@ -1,9 +1,6 @@
+import { Check, ClipboardText } from "@phosphor-icons/react"
 import { useState } from "react";
-import {
-  faClipboardCheck,
-  faClipboardList,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 interface clipBoardProps {
   copyText: string;
 }
@@ -30,12 +27,12 @@ export function ClipBoardCopy({ copyText }: clipBoardProps) {
         {isCopied ? (
           <span className="flex h-7 items-center gap-2 rounded-lg bg-green-600 p-5 text-center  text-sm text-white">
             {copyText}
-            <FontAwesomeIcon icon={faClipboardCheck} />
+            <Check size={20} />
           </span>
         ) : (
           <span className="flex h-7 items-center gap-2 rounded-lg bg-red-600 p-5 text-center text-sm text-white opacity-90">
             {copyText}
-            <FontAwesomeIcon icon={faClipboardList} />
+            <ClipboardText size={20} />
           </span>
         )}
       </button>
