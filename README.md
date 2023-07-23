@@ -1,11 +1,10 @@
-<img alt="Repository size" src="https://img.shields.io/github/repo-size/Rafeso/portfolio-v1">
-  
   <a href="https://github.com/Rafeso/portfolio-v1/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Rafeso/portfolio-v1">
   </a>
     
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/Rafeso/portfolio-v1/stargazers">
+
+  <a href="https://github.com/Rafeso/portfolio-v1/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/Rafeso/portfolio-v1?style=social">
   </a>
 

@@ -4,7 +4,7 @@ date: 03-08-2023
 description: Um blog que utiliza da API do GitHub para buscar issues de um repositório
 draft: false
 image: https://i.ibb.co/2FMRh4M/githublog.webp
-repository: https://github.com/Rafeso
+repository: https://github.com/Rafeso/github_blog
 website: https://github-blog-rafeso.vercel.app
 tag: ReactJs
 ---
