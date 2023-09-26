@@ -16,7 +16,4 @@ export default defineConfig({
     analytics: true,
   }),
   integrations: [tailwind(), react(), compress(), sitemap(), prefetch({throttle:3}), robotsTxt()],
-  experimental: {
-    assets: true,
-  }
 });
