@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
-import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
 import robotsTxt from "astro-robots-txt";
@@ -15,12 +14,5 @@ export default defineConfig({
   adapter: vercel({
     analytics: true,
   }),
-  integrations: [
-    tailwind(),
-    react(),
-    compress(),
-    sitemap(),
-    prefetch({ throttle: 3 }),
-    robotsTxt(),
-  ],
+  integrations: [tailwind(), react(), sitemap(), prefetch(), robotsTxt()],
 });
