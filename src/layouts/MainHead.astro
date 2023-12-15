@@ -28,13 +28,14 @@ const { title, description } = Astro.props;
   <title>{title}</title>
 
   <SEO
+    title = "Portfólio de Rafael Feitosa"
+    description="Site com todos os meus projetos pessoais."
     openGraph={{
       basic: {
         title: "Portfólio de Rafael Feitosa",
         type: "website",
         image: "https://i.ibb.co/VpgqtPN/preview.webp",
-        description:
-          "Portfólio com os projetos de Rafael Feitosa Desenvolvedor Front-end",
+        url: "https://rafaelfeitosa.vercel.app",
       },
       optional: {
         locale: "pt_BR",
@@ -44,8 +45,8 @@ const { title, description } = Astro.props;
       card: "summary_large_image",
       title: "Portfólio de Rafael Feitosa",
       image: "https://i.ibb.co/VpgqtPN/preview.webp",
-      description:
-        "Portfólio com os projetos de Rafael Feitosa Desenvolvedor Front-end",
+      description: "Site com todos os meus projetos pessoais.",
+      site: "https://rafaelfeitosa.vercel.app"
     }}
   />
 </head>

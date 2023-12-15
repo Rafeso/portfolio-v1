@@ -108,7 +108,7 @@ Também faço referência ao criador do [planetfall.io](https://planetfall.io), 
  <sub><b>Rafael Feitosa</b></sub></a> <a href="#">☕</a>
  <br />
  
- [![Linkedin Badge](https://img.shields.io/badge/-Rafael-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rafael-feitosa-618472241/)](https://www.linkedin.com/in/rafael-feitosa-618472241/) 
+ [![Linkedin Badge](https://img.shields.io/badge/-Rafael-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rafael-feitosa-618472241/)](https://www.linkedin.com/in/rafael-feitosa-618472241/)
 
 ---
 

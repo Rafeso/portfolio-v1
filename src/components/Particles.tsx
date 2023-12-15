@@ -25,7 +25,7 @@ export function Particles() {
     smooth: true,
     fullScreen: {
       enable: true,
-      zIndex: -1,
+      zIndex: -99999999,
     },
     //delay: 2,
     interactivity: {
@@ -39,25 +39,25 @@ export function Particles() {
     },
     particles: {
       color: {
-        value: "#52525b",
+        value: "#162952",
       },
       move: {
-        direction: "bottom-left",
+        direction: "none",
         enable: true,
-        speed: 0.2,
+        speed: 0.3,
       },
       number: {
         density: {
           enable: true,
           area: 100,
         },
-        value: 20,
+        value: 30,
       },
       opacity: {
         value: 1,
       },
       size: {
-        value: 0.6,
+        value: 0.8,
       },
     },
     detectRetina: true,

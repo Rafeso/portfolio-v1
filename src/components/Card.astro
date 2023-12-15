@@ -15,7 +15,7 @@ const { title, date, description, tag } = data;
 >
   <article class="w-full h-full p-4 md:p-8 space-y-4">
     <div class="flex justify-between text-zinc-300 text-xs">
-      <Link href={`/tag/${slugify(tag)}/`} text={tag} classes="underline text-zinc-400 group-hover:text-zinc-200 group-hover:decoration-zinc-100 duration-500 tracking-wide" />
+      <Link href={`/projects/tag/${slugify(tag)}/`} text={tag} classes="underline text-zinc-400 group-hover:text-zinc-200 group-hover:decoration-zinc-100 duration-500 tracking-wide" />
       {formatDate(date)}
     </div>
     <div class="w-full h-px bg-zinc-600/50"></div>
@@ -28,11 +28,11 @@ const { title, date, description, tag } = data;
           rel="prefetch"
         />
       </Tag>
-        <p class="text-zinc-400 text-xs my-2 group-hover:text-zinc-300 duration-500">{description}</p>
+        <p class="text-zinc-400 text-xs my-2 h-full group-hover:text-zinc-300 duration-500">{description}</p>
         <Link
           href={`/projects/${url}`}
           text="Veja o Projeto"
-          classes="text-zinc-400 text-xs flex gap-1 items-center mt-5 hover:text-zinc-200 duration-300"
+          classes="text-zinc-400 text-xs flex gap-1 items-center hover:text-zinc-200 duration-300"
           icon={{ name: "charm:arrow-right", side: "right", width: "16" }}
           rel="prefetch"
         />
@@ -40,3 +40,4 @@ const { title, date, description, tag } = data;
     </div>
   </article>
 </div>
+

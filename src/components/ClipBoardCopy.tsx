@@ -1,4 +1,4 @@
-import { Check, ClipboardText } from "@phosphor-icons/react"
+import { Check, ClipboardText } from "@phosphor-icons/react";
 import { useState } from "react";
 
 interface clipBoardProps {

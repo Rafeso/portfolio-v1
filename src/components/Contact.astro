@@ -5,31 +5,25 @@ import { Icon } from "astro-icon";
 import socialData from "../data/socialData";
 ---
 
-<div class="flex items-center gap-3 my-5 text-sm text-center">
-  {
-    socialData.map((item) => (
-      <a
-        href={item.href}
-        class="flex gap-1 duration-500 ease-in-out text-zinc-400 hover:text-zinc-200"
-        target="_blank"
-      >
-        {item.name == "LinkedIn" ? (
-          <Icon name="line-md:linkedin" width="15" />
-        ) : (
-          <Icon name="line-md:github" width="16" />
-        )}
-        {item.name}
-      </a>
-    ))
-  }
-</div>
-
-<div class="flex flex-col text-center">
-  <span class="flex gap-1 text-zinc-400 text-sm"
-    >Se preferir, entre em contato por email. <Icon
-      name="twemoji:smiling-face-with-smiling-eyes"
-      width="16"
-    /></span
-  >
-  <ClipBoardCopy copyText="rafaefeitosa@gmail.com" client:load />
+<div class="flex flex-col gap-3 my-5 text-center">
+  <ul class="flex items-center justify-center gap-3">
+    {
+      socialData.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="flex gap-1 items-center duration-500 ease-in-out text-gray-400 hover:text-zinc-200 text-xs md:text-sm"
+            target="_blank"
+          >
+            {item.name == "LinkedIn" ? (
+              <Icon name="line-md:linkedin" width="15" />
+            ) : (
+              <Icon name="line-md:github" width="16" />
+            )}
+            {item.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </div>

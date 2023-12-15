@@ -1,5 +1,6 @@
 ---
-import MainHead from "@layouts/MainHead.astro"
+import MainHead from "@layouts/MainHead.astro";
+import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -7,41 +8,39 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
-
 ---
 
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <MainHead title={title} description={description} />
+    <ViewTransitions />
   </head>
   <body class="bg-zinc-950">
     <slot />
-  </body>
+  </body><style is:global>
+    /* Firefox */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #52525b #09090b;
+    }
+
+    /* Chrome, Edge and Safari */
+    *::-webkit-scrollbar {
+      width: 0.4rem;
+    }
+    *::-webkit-scrollbar-track {
+      border-radius: 0.5rem;
+      background-color: #09090b;
+    }
+    *::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: #52525b;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
 </html>
-
-<style is:global>
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #52525b #09090b;
-  }
-
-  /* Chrome, Edge and Safari */
-  *::-webkit-scrollbar {
-    width: 0.4rem;
-  }
-  *::-webkit-scrollbar-track {
-    border-radius: 0.5rem;
-    background-color: #09090b;
-  }
-  *::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #52525b;
-  }
-
-  body {
-    font-family: "Inter", sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-</style>

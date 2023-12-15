@@ -1,8 +1,12 @@
 const navData = [
-	{
-		name: "Projetos",
-		href: "/projects",
-	},
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "Projetos",
+    href: "/projects",
+  },
 ];
 
 export default navData;
